@@ -1,0 +1,24 @@
+/* bugSolution.css */
+
+/* Instead of calc(100% - 50%), use a more explicit approach or variable*/
+.container {
+  width: calc(100% - 100px); /* Or define a variable for 100px*/
+}
+
+/* Instead of nested calc(), break down the calculation into multiple steps */
+.element {
+  width: var(--element-width);
+}
+:root {
+  --element-width: calc( (100vw - 20px) / 2 );
+}
+
+/* Avoid calc(100vw - 100%), consider using viewports units or media queries for responsiveness*/
+.responsive-element {
+  width: 90vw; /*or use media queries*/
+}
+@media (min-width: 768px) {
+  .responsive-element {
+    width: 70%;
+  }
+} 
